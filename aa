@@ -1,0 +1,20 @@
+ mapContainer: {
+    flex: 0.6,
+  },
+  map: {
+    width: "95%",
+    height: "100%",
+    alignSelf: "center",
+  },
+  infoContainer: {
+    backgroundColor: "rgba(0,0,100,0.8)",
+    marginTop: -10,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    padding: 30,
+  },
+  infoText: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "bold",
+  },
