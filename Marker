@@ -16,8 +16,16 @@
               </View>
               
               
+  mapContainer: {
+    flex: 0.6,
+  },
+  map: {
+    width: "95%",
+    height: "100%",
+    alignSelf: "center",
+  },
               
-              infoContainer: {
+   infoContainer: {
     backgroundColor: "rgba(0,0,100,0.8)",
     marginTop: -10,
     borderTopLeftRadius: 30,
