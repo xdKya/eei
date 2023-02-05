@@ -20,7 +20,10 @@ import axios from "axios";
 
 
 
-<View styles={styles.gifContainer}>
+ return (
+            <View>
+                <ImageBackground source={bg_img} style={styles.backgroundImage}>
+                    <View styles={styles.gifContainer}>
                         <Image source={speed} style={{ width: size, height: size, alignSelf: "center" }}></Image>
                         <View>
                             <Text style={[styles.cardTitle, { marginTop: 400, marginLeft: 50 }]}>{item.name}</Text>
@@ -31,7 +34,9 @@ import axios from "axios";
                             <Text style={[styles.cardText, { marginTop: 5, marginLeft: 50 }]}>Distância da Terra (KM) - {item.close_approach_data[0].miss_distance.kilometers}</Text>
                         </View>
                     </View>
-                    
+                </ImageBackground>
+            </View>
+        );
                     
                     
                     
