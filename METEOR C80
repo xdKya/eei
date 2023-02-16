@@ -1,7 +1,24 @@
+  renderItem = ({ item }) => {
+    let meteor = item;
+    let bg_img, speed, size;
+    if (meteor.threat_score <= 30) {
+      bg_img = require("../assets/meteor_bg1.png");
+      speed = require("../assets/meteor_speed1.gif");
+      size = 100;
+    } else if (meteor.threat_score <= 75) {
+      bg_img = require("../assets/meteor_bg2.png");
+      speed = require("../assets/meteor_speed2.gif");
+      size = 150;
+    } else {
+      bg_img = require("../assets/meteor_bg3.png");
+      speed = require("../assets/meteor_speed3.gif");
+      size = 200;
+    }
 
-
-
-<View styles={styles.gifContainer}>
+    return (
+      <View>
+        <ImageBackground source={bg_img} style={styles.backgroundImage}>
+          <View styles={styles.gifContainer}>
             <Image
               source={speed}
               style={{ width: size, height: size, alignSelf: "center" }}
@@ -39,7 +56,10 @@
               </Text>
             </View>
           </View>
-          
+        </ImageBackground>
+      </View>
+    );
+  };
 
   keyExtractor = (item, index) => {
     index.toString();
