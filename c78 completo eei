@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import MapView, { Marker } from "react-native-maps";
-import axios from "axios";
+
 
 export default class ISSLocationScreen extends Component {
   constructor(props) {
@@ -21,19 +21,10 @@ export default class ISSLocationScreen extends Component {
     };
   }
 
-  getLocation = () => {
-    axios
-      .get("https://api.wheretheiss.at/v1/satellites/25544")
-      .then((response) => {
-        this.setState({ location: response.data });
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  };
+
 
   componentDidMount() {
-    this.getLocation();
+
   }
 
   render() {
